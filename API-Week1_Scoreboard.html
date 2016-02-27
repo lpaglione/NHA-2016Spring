@@ -1,0 +1,121 @@
+<!---------------------------------------->
+<!-- Laura Paglione (MENTOR)			-->
+<!-- NanoHacker Academy					-->
+<!-- Spring 2016: APIs in JavaScript	-->
+<!-- February 27, 2016					-->
+<!---------------------------------------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>NHA 2016:API - Scroreboard</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<h1>Scoreboard Sorting</h1>
+
+	<!-- Entry fields -->
+	<p>Enter your name and score:</p>
+	Name: <input id="name" type="text" /><br>
+	Score: <input id="score" type="number" /><br>
+	<button>Add score</button>
+
+	<!-- Table showing scores in the order that they were entered -->
+	<h2>Original order</h2>
+	<table id="original">
+		<th>name</th>
+		<th>score</th>
+	</table>
+
+	<!-- Table showing scores in sorted order -->
+	<h2>Sorted order</h2>
+	<table id="sorted">
+		<th>name</th>
+		<th>score</th>
+	</table>
+
+	<!-- Add a log to tell the user what is going on -->
+	<h2>Sorting log</h2>
+	<p id="log"></p>
+
+	<script type="text/javascript">
+
+	// Script executed when the button is clicked
+	var sortedScores = [];
+	var numScores = 0;
+
+	$("button").click(function(){
+		// Get the inputs
+		var newName = $("input#name").val();
+		var newScore = $("input#score").val();
+
+		// Add the score to the table of unsorted scores
+		$("table#original").append("<tr><td>"+newName+"</td><td>"+newScore+"</td></tr>");
+
+		// add the score to the sorted order array (add the score as a number!)
+		numScores = numScores + 1; //increment the number of scores there are.
+		sortedScores.push([newName,Number(newScore)]);
+		//var item = sortedScores[numScores-1][1];
+
+		// SORT the scores using the Bubble Sort - highest score in the lowest index (first)
+
+		// We will evaluate all of the scores in pairs starting from
+		// the first index (0) to the last one (numScores - 1). Each
+		// time we will compare a pair of numbers, and will swap them
+		// if needed so that the higher number ends up in the lower-
+		// numbered index in the array. In each round, the lowest 
+		// score in the array will end up at the end.
+
+		var n = numScores - 1; // the index of the last item in the array
+		var numSwaps = 0; // keeping track of the number of swaps we made
+
+		while (n > 0) { // only sort if there is more than one number left to sort
+
+			var i = 0;  // the index of the first array item we'll check
+
+			while (i < n) { // do this loop until you get to the last one to sort
+				// compare the next two numbers (make sure they're numbers, not text!)
+				var scoreA = sortedScores[i][1];
+				var scoreB = sortedScores[i+1][1];
+
+				// if the lower index item is smaller, swap the numbers
+				if (scoreA < scoreB) {
+					//swap the two
+					var temp = sortedScores[i];
+					sortedScores[i] = sortedScores[i+1];
+					sortedScores[i+1] = temp;
+
+					// Add some info to the log
+					numSwaps = numSwaps + 1; // note that we swapped!
+					$("p#log").append("SWAPPED ["+sortedScores[i]+"] and ["+sortedScores[i+1]+"].<br/>")
+				};
+
+				// increment i to evaluate the next pair
+				i = i + 1;
+			};
+			n = n - 1;
+		};
+
+		// Tell the log how many swaps were made in this round to the log
+		$("p#log").append("Number of scores stored: "+numScores+". SWAPS IN THIS ROUND: "+numSwaps+".<br/>&nbsp;<br/>")
+
+		// Display the array in the sorted order table
+		// Clear the table
+		$("table#sorted").html("<tr><td>"+sortedScores[0][0]+"</td><td>"+sortedScores[0][1]+"</td></tr>");
+
+		// add each item in the sortedScores array
+		var listnum = 1;
+		while (listnum < numScores) {
+			$("table#sorted").append("<tr><td>"+sortedScores[listnum][0]+"</td><td>"+sortedScores[listnum][1]+"</td></tr>");
+			listnum = listnum + 1;
+		};
+	});
+
+
+
+	</script>
+</body>
+</html>
