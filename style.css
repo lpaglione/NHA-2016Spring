@@ -1,0 +1,137 @@
+/*---------------------------------------->
+<!-- Laura Paglione (MENTOR)            -->
+<!-- NanoHacker Academy                 -->
+<!-- Spring 2016 personal microsite     -->
+<!--                                    -->
+<!-- style.css                          -->
+<!-- March 5, 2016                      -->
+<!--------------------------------------- */
+
+/* General Styling */
+body {
+	font-family: 'Pontano Sans', Helvetica, sans-serif;
+	color: #4C6700;
+	margin: 0px 15px 15px 15px;
+	font-size: 1em;
+}
+
+h1, h2, h3 {
+	/* font styling */
+	font-family: 'Chelsea Market', Gadget, sans-serif;
+	color: #16064B;
+}
+
+/* HEADERS */
+h1 {
+	background-color: #16064B;
+	color: #A596D6;
+	font-size: 2.5em;
+	text-transform: capitalize;
+	margin: 0px -15px -15px -15px;
+	padding: 50px 15px 25px 15px;
+}
+
+h2 {
+	font-size: 1.9em;
+	padding: 10px 0px 0px 0px;
+	line-height: 0.8;
+}
+
+h3 {
+	font-size: 1.4em;
+	/*padding: 10px 0px 0px 0px;*/
+	max-width: 300px;
+	line-height: 0.4;
+}
+
+a, a:link a:visited{
+	color: white;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #FFAF5E;
+}
+
+/* special classes */
+.code {
+	font-family: 'Source Code Pro', Monaco, monospace;
+}
+
+.hand-annotate {
+	font-family: 'Nothing You Could Do', cursive, sans-serif;
+	font-size: 1.4em;
+	color: #4C6700;
+	text-align: left;
+	background-color: #E2F8A4;
+	border: 4px double #F88209;
+	padding: 10px 10px 10px 10px;
+	max-width: 300px;
+	float: right;
+}
+
+.homework-button {
+	background-color: #F88209;
+	font-family: 'Pontano Sans', Helvetica, sans-serif;
+	font-size: 1em;
+	color: white;
+	padding: 3px 10px;
+	border: .5px solid #F88209;
+	border-radius: 6px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	float: right;
+}
+
+.not-yet-link {
+	background-color: white;
+	font-family: 'Pontano Sans', Helvetica, sans-serif;
+	font-size: 1em;
+	color: #F88209;
+	padding: 3px 10px;
+	border: .5px solid #F88209;
+	border-radius: 6px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	float: right;
+}
+
+.class-section {
+	
+}
+
+.week-card {
+	max-width: 600px;
+	border: 1px solid #A596D6;
+	padding: 0px 10px 10px 10px;
+	border-radius: 6px;
+
+}
+.week-header {
+	max-width: 600px;
+}
+/* PALETTE
+
+	Purple
+	* Main: #3C19AB;
+	* Dark1: #260D78;
+	* Dark2: #16064B;
+	* Light1: #6B53BC;
+	* Light2: #A596D6;
+
+	Green
+	* Main: #AFEB08;
+	* Dark1: #79A500;
+	* Dark2: #4C6700;
+	* Light1: #CAF359;
+	* Light2: #E2F8A4;
+
+	Orange
+	* Main: #F88209;
+	* Dark1: #AF5800;
+	* Dark2: #6D3700;
+	* Light1: #FFAF5E;
+	* Light2: #FFD4A9;
+	*/
