@@ -82,6 +82,7 @@ a:hover, a:active {
 	text-decoration: none;
 	display: inline-block;
 	float: right;
+	cursor: pointer;
 }
 
 .not-yet-link {
@@ -99,7 +100,7 @@ a:hover, a:active {
 }
 
 .class-section {
-	
+
 }
 
 .week-card {
