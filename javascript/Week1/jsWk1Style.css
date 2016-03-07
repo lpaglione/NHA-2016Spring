@@ -1,0 +1,64 @@
+/*---------------------------------------->
+<!-- Laura Paglione (MENTOR)            -->
+<!-- NanoHacker Academy                 -->
+<!-- Spring 2016 personal microsite     -->
+<!--                                    -->
+<!-- jsWk1Style.css                     -->
+<!-- March 5, 2016                      -->
+<!--------------------------------------- */
+
+/* Stylesheet for the Week 1 Adventure game */
+/* This stylesheet is designed to be used with the style.css sheet */
+a {
+	color: #3C19AB;
+}
+
+.story {
+	max-width: 500px;
+}
+
+/* Styling for the dropdown button for the user selections */
+.action-choice {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.action-choice a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.action-choice a:hover {
+	background-color: #f1f1f1;
+}
+
+.homework-button {
+	float: none;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown:hover .action-choice {
+	display: block;
+}
+
+.dropdown:hover .homework-button {
+	background-color: #FFAF5E;;
+}
+
+#story-image {
+	max-height: 300px;
+}
+
+#story-question {
+	font-style: italic;
+	max-width: 300px;
+}

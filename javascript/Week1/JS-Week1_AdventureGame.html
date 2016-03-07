@@ -1,0 +1,44 @@
+<!---------------------------------------->
+<!-- Laura Paglione (MENTOR)            -->
+<!-- NanoHacker Academy                 -->
+<!-- Spring 2016: Got Game (JavaScript) -->
+<!-- March 6, 2016                      -->
+<!---------------------------------------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>NHA 2016:Got Game? JavaScript Programming - Scroreboard</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<link rel="stylesheet" type="text/css" href="jsWk1Style.css">
+	<script type="text/javascript" src="jsWk1Scripts.js"></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<h1>NHA 2016: Got Game?<br/>Week 1 - Choose your own adventure</h1>
+	<p><em><a href="../../index.html">return to assignment lists</a></em></p>
+
+	<div class="story">
+		<h2>Harold and the Purple Crayon</h2>
+		<p><em>adapted from the stories by Crocket Johnson</em></p>
+		<hr/>
+
+		<p><img id="story-image" src="Week1Images/harold.png"></p>
+
+		<p id="story-narrative">One evening, after thinking it over for some time, Harold decided to go for a walk in the moonlight.<br/><br/>There wasn't any moon, and Harold needed a moon for a walk in the moonlight.<br/><br/>And he needed something to walk on.<br/><br/>He made a long straight path so he wouldn't get lost.</p>
+
+		<p id="story-question">Would you like to continue?</p>
+
+		<div class="dropdown">
+			<button class="homework-button" id="take-action">Choose your answer</button>
+			<div id="theChoices" class="action-choice">
+				<a name="chooseAdventure" onclick="takeAction('chooseAdventure');">Yes</a>
+				<a name="finish" onclick="takeAction('finish');">No</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
