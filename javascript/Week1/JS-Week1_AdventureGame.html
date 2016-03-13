@@ -35,8 +35,8 @@
 		<div class="dropdown">
 			<button class="homework-button" id="take-action">Choose your answer</button>
 			<div id="theChoices" class="action-choice">
-				<a name="chooseAdventure" onclick="takeAction('chooseAdventure');">Yes</a>
-				<a name="finish" onclick="takeAction('finish');">No</a>
+				<a name="chooseAdventure" data-action="chooseAdventure" cursor = "pointer" onclick="takeAction(this);">Yes</a>
+				<a name="finish" data-action="finish" cursor = "pointer" onclick="takeAction(this);">No</a>
 			</div>
 		</div>
 	</div>

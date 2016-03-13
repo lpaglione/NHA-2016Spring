@@ -39,29 +39,29 @@ function setChoices(newChoices) {
 
 	var x = 0;
 
-	console.log("There are "+countNewChoices+" choices to add");
-
 	for (var i = 0; i < countNewChoices; i++) {
 		var newPick = document.createElement("a");
-		newPick.name = newChoices[i][0];
+		var newAction = newChoices[i][0];
 
-		var theCommand = newChoices[i][0];
-		newPick.setAttribute("onclick", takeAction(theCommand));
+		//set the atributes of new menu pick
+		newPick.name = newAction;
+		$(newPick).data('action', newAction);
+		newPick.style.cursor = "pointer";
+		newPick.setAttribute("onclick", "takeAction(this)");
 
-		//newPick.onclick = function(){ takeAction(theCommand); }
-
+		//set what the menu pick will say
 		newPick.text = newChoices[i][1];
 
-		console.log("The new pick name is "+newPick.name);
-
+		//add it to the menu
 		actionDropdown.appendChild(newPick);
 	};
 
 }
 
 // This function handles all of the stories. The functions above handle changing the text and choices on the screen
-function takeAction(action) {
-	console.log("the action is "+action);
+function takeAction(item) {
+	//Get the action from the item selected
+	var action = $(item).data('action');
 
 	switch (action) {
 		case "finish":
@@ -84,33 +84,86 @@ function takeAction(action) {
 				['picnic', "Have a picnic"],
 				['mountain', "Climb a mountain"],
 				['balloon', "Climb into a hot air baloon"],
-				['city', "Visit a city"]]);
+				['city', "Visit a city"],
+				['finish', "I'm tired. Go to bed"]]);
 			return;
 
 		case "appleTree":
 			// The apple tree adventure
-			setImage("Week1Images/haroldRoad.png");
+			setImage("Week1Images/haroldApple.png");
 			setNarrative("Harold Harold goes on the apple tree adventure.");
 			setQuestion("What adventure does he choose next?")
 			setChoices([
 				['boat', "Draw a boat"],
 				['mountain', "Climb a mountain"],
-				['city', "Visit a city"]]);
-				['chooseAdventure', "Return to the road"]
+				['city', "Visit a city"],
+				['chooseAdventure', "Return to the road"],
+				['finish', "I'm tired. Go to bed"]]);
 			return;
 
 		case "boat":
 			// The boat adventure
-			setImage("Week1Images/haroldRoad.png");
-			setNarrative("Harold continued on his adventure, taking his big purple crayon with him.<br/><br/>But he didn't seem to be getting anywhere on the long straight path.<br/><br/>So he left the path to find an adventure. And the moon went with him.");
-			setQuestion("What adventure does he choose?")
+			setImage("Week1Images/haroldBoat.png");
+			setNarrative("Harold goes on the boat adventure");
+			setQuestion("What adventure does he choose next?")
 			setChoices([
-				['appleTree', "Visit the apple tree"], 
-				['boat', "Draw a boat"],
 				['picnic', "Have a picnic"],
 				['mountain', "Climb a mountain"],
 				['balloon', "Climb into a hot air baloon"],
-				['city', "Visit a city"]]);
+				['chooseAdventure', "Return to the road"],
+				['finish', "I'm tired. Go to bed"]]);
+			return;
+
+		case "picnic":
+			// The picnic adventure
+			setImage("Week1Images/haroldPicnic.png");
+			setNarrative("Harold goes on the picnic adventure");
+			setQuestion("What adventure does he choose next?")
+			setChoices([
+				['boat', "Draw a boat"],
+				['mountain', "Climb a mountain"],
+				['balloon', "Climb into a hot air baloon"],
+				['chooseAdventure', "Return to the road"],
+				['finish', "I'm tired. Go to bed"]]);
+			return;
+
+		case "mountain":
+			// The mountain adventure
+			setImage("Week1Images/haroldMountain.png");
+			setNarrative("Harold goes on the mountain adventure");
+			setQuestion("What adventure does he choose next?")
+			setChoices([
+				['appleTree', "Visit the apple tree"], 
+				['city', "Visit a city"],
+				['balloon', "Climb into a hot air baloon"],
+				['chooseAdventure', "Return to the road"],
+				['finish', "I'm tired. Go to bed"]]);
+			return;
+
+		case "balloon":
+			// The balloon adventure
+			setImage("Week1Images/haroldBalloon.png");
+			setNarrative("Harold goes on the balloon adventure");
+			setQuestion("What adventure does he choose next?")
+			setChoices([
+				['appleTree', "Visit the apple tree"], 
+				['city', "Visit a city"],
+				['boat', "Draw a boat"],
+				['chooseAdventure', "Return to the road"],
+				['finish', "I'm tired. Go to bed"]]);
+			return;
+
+		case "city":
+			// The city adventure
+			setImage("Week1Images/haroldCity.png");
+			setNarrative("Harold goes on the city adventure");
+			setQuestion("What adventure does he choose next?")
+			setChoices([
+				['appleTree', "Visit the apple tree"], 
+				['picnic', "Have a picnic"],
+				['boat', "Draw a boat"],
+				['chooseAdventure', "Return to the road"],
+				['finish', "I'm tired. Go to bed"]]);
 			return;
 	}
 
