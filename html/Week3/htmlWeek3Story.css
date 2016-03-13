@@ -1,0 +1,36 @@
+/*---------------------------------------->
+<!-- Laura Paglione (MENTOR)            -->
+<!-- NanoHacker Academy                 -->
+<!-- Spring 2016                        -->
+<!--                                    -->
+<!-- htmlWeek3Story.css                 -->
+<!-- March 13, 2016                     -->
+<!-------------------------------------- */
+
+/* Stylesheet for the HTML Week 3 storybook project */
+.story-page {
+
+}
+
+.story-image {
+	max-width: 400px;
+	display: inline-block;
+}
+
+.story-text {
+	max-width: 400px;
+	font-family: 'Nothing You Could Do', cursive, sans-serif;
+	font-size: 1.4em;
+	display: inline-block;
+	padding-right: 5px;
+	vertical-align: top;
+}
+
+.story-nav {
+	text-align: right;
+}
+
+
+.proposal-text {
+	max-width: 600px;
+}
