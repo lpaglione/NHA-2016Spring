@@ -1,0 +1,34 @@
+/*---------------------------------------->
+<!-- Laura Paglione (MENTOR)            -->
+<!-- NanoHacker Academy                 -->
+<!-- Spring 2016                        -->
+<!--                                    -->
+<!-- htmlWeek3Flas.css                  -->
+<!-- March 13, 2016                     -->
+<!-------------------------------------- */
+
+/* Stylesheet for the HTML Week 3 Flag project */
+.flag {
+	width: 400px;
+	height: 200px;
+}
+
+.red-bar {
+	display: inline-block;
+	background-color: red;
+	border-width: 0px;
+	width: 30%;
+	height: 100%;
+}
+
+.leaf-bar {
+	display: inline-block;
+	background-color: white;
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Maple_Leaf.svg/2000px-Maple_Leaf.svg.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 80%;
+	border-width: 0px;
+	width: 30%;
+	height: 100%;
+}
