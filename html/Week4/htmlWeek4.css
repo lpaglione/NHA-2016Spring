@@ -95,6 +95,7 @@
 	max-height: 200px;
 	margin: 40px;
 	display: block;
+	border: 3px inset grey;
 }
 
 .frameA {
